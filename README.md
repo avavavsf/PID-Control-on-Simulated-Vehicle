@@ -1,6 +1,4 @@
 # PID Control on Simulated Vehicles
----
-# Project 9 - PID Controller in C++
 
 ## Describe the effect each of the P, I, D components had in your implementation.
 
