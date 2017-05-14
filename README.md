@@ -2,7 +2,8 @@
 
 The final video of the simulated vehicles controled by my PID controler is here below.
 * Resulution: 640X480; Graphics Quality: Fantastic )
-[![IMAGE ALT TEXT](http://img.youtube.com/vi/0H8ghKrc0Cw/0.jpg)](https://youtu.be/0H8ghKrc0Cw "a small networkd ")
+
+[![IMAGE ALT TEXT](http://img.youtube.com/vi/0H8ghKrc0Cw/0.jpg)](https://youtu.be/0H8ghKrc0Cw "PID control ")
 
 ## Reflection 
 ### 1. Describe the effect each of the P, I, D components had in your implementation.
