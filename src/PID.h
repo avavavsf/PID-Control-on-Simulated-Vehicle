@@ -18,6 +18,12 @@ public:
   double Kd;
 
   /*
+  * Used to store the best error and iteration for twiddle
+  */
+  double best_err;
+  int it;
+
+  /*
   * Constructor
   */
   PID();
@@ -41,6 +47,13 @@ public:
   * Calculate the total PID error.
   */
   double TotalError();
+
+    /*
+  * Optimize the parameters using twiddle\
+  */
+  void Twiddle();
+
+  void UpdateCoefs(double updates[]);
 };
 
 #endif /* PID_H */
