@@ -10,22 +10,11 @@ The I component provides an additional response that is proportional to the inte
 
 ## 2. Describe how the final hyperparameters were chosen.
 
-The final hyperparameters were chosen iteratively. I started by setting all PID coefficients to a value of 0 With this version of the PID, the car would drive completely straight with no error response. 
-
-[No Controller](https://youtu.be/iu7LkELocBg)
-
-I then increased the P component until it demonstrated a significant response to the cross-track error. A value of 0.1 was sufficient. 
-
-[P Controller Only](https://youtu.be/hltDnF9vOcU)
-
-
-With this value for the P component, the oscillations of the car increase over time. To combat this, I increased the D component of the PID until the oscillations were manageable and the car did not go outside the track. A value of 3.0 was used for the D component.
-
-[PD Controller Only](https://youtu.be/z52d4O9o2AEU)
-
-I then incremented the I component to make the responses a little smoother. A value of 0.003 was sufficient to smooth the response without causing performance to decrease. The final performance can be seen below.
-
-[Final PID Controller](https://youtu.be/QRBpIXL-tLI)
+The final hyperparameters were chosen by manual tuning iteratively, even though the Twiddle code is there but did work very well in my case. 
+* Started by setting all PID coefficients 0, the car would drive completely straight with no error response. 
+* Then increased the P component until it demonstrated a significant response to the cross-track error. I settled at 0.1 for P componet coeffient.
+* The oscillations of the car increase over time with only P component. So I increased the D component of the PID until the  the car did not go outside the track. Finally 3.0 was used for the D component.
+* Finaly incremented the I component to make the responses a little bit smoother. A value of 0.003 was sufficient. The final performance can be seen above in the video link.
 
 ## Dependencies
 
