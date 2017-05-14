@@ -2,11 +2,11 @@
 
 ## 1. Describe the effect each of the P, I, D components had in your implementation.
 
-The P component provides a steering angle response that is proportional to the cross-track error (CTE). When a value of 0.1 is used for the P coefficient, it can be seen that the car responds to the CTE by swaying to the left or right. This response on its own overshoots the desired behaviour and results in larger and larger oscillations.
+The P component provides a steering angle that is proportional to the cross-track error (CTE). High P component coeffient results in large change in output and leads to unstable system. Using P component alone will cause overshooting problem, and results in larger and larger oscillations.
 
-The D component provides an additional response that is proportional to the change in the value of the cross-track error. When a value of 3 is chosen for the D coefficient, it can be seen that the oscillations are no longer increasing and the car stays within the limits of the track.
+The D component changes the steering angle proportional to the change of the CTE. It can cancel the overshoting probleblem when a proper D component cofficient value is chosen.
 
-The I component provides an additional response that is proportional to the integrated value of the cross-track error. When a value of 0.01 is used, the bias of the steering is overcome and the car no longer has less of a preference to veer right.
+The I component changes the steering angle proportional to the integrated value of the CTE. It can compensate the small bias that the P component can not handle.
 
 ## 2. Describe how the final hyperparameters were chosen.
 
