@@ -1,14 +1,16 @@
 # PID Control on Simulated Vehicles
 
-## 1. Describe the effect each of the P, I, D components had in your implementation.
+The final video of the simulated vehicles controled by my PID controler is here below.
 
+## Reflection 
+### 1. Describe the effect each of the P, I, D components had in your implementation.
 The P component provides a steering angle that is proportional to the cross-track error (CTE). High P component coeffient results in large change in output and leads to unstable system. Using P component alone will cause overshooting problem, and results in larger and larger oscillations.
 
 The D component changes the steering angle proportional to the change of the CTE. It can cancel the overshoting probleblem when a proper D component cofficient value is chosen.
 
 The I component changes the steering angle proportional to the integrated value of the CTE. It can compensate the small bias that the P component can not handle.
 
-## 2. Describe how the final hyperparameters were chosen.
+### 2. Describe how the final hyperparameters were chosen.
 
 The final hyperparameters were chosen by manual tuning iteratively, even though the Twiddle code is there but did work very well in my case. 
 * Started by setting all PID coefficients 0, the car would drive completely straight with no error response. 
